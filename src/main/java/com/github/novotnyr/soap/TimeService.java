@@ -7,11 +7,11 @@ import java.time.LocalDateTime;
 
 @WebService
 public class TimeService {
-    public LocalDateTime getNow() {
+    public LocalDateTime getNow() { //<1>
         return LocalDateTime.now();
     }
 
     public static void main(String[] args) {
-        Endpoint.publish("http://localhost:18888/ws/now", new TimeService());
+        Endpoint.publish("http://localhost:18888/ws/now", new TimeService()); //<2>
     }
 }
