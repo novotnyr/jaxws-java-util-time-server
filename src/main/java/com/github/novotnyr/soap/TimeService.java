@@ -3,12 +3,10 @@ package com.github.novotnyr.soap;
 import jakarta.jws.WebService;
 import jakarta.xml.ws.Endpoint;
 
-import java.time.LocalDateTime;
-
 @WebService
 public class TimeService {
-    public LocalDateTime getNow() { //<1>
-        return LocalDateTime.now();
+    public CurrentLocalDateTime getNow() { //<1>
+        return new CurrentLocalDateTime();
     }
 
     public static void main(String[] args) {
